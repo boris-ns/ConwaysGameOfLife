@@ -1,3 +1,8 @@
+/**
+ * TODO:
+ *     - calculate cells on edges
+ */
+
 const CANVAS_WIDTH   = 1000;
 const CANVAS_HEIGHT  = 600;
 const CELL_DIMENSION = 10;
@@ -8,11 +13,12 @@ let grid; // Cell[][] grid
 function createGrid() {
     let numRows = CANVAS_HEIGHT / CELL_DIMENSION;
     let numCols = CANVAS_WIDTH  / CELL_DIMENSION;
-    grid = new Array(numRows);
+    grid = new Array(numCols);
+
     let counter = 0;
 
     for (let i = 0; i < grid.length; ++i) {
-        grid[i] = new Array(numCols);
+        grid[i] = new Array(numRows);
 
         // Creates Cell objects, randomized dead or alive
         for (let j = 0; j < grid[i].length; ++j) {
