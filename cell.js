@@ -8,7 +8,7 @@ class Cell {
     }
 
     draw() {
-        // Black color if cell is alive, white if cell is dead
+        // Black color if cell is dead, white if cell is alive
         this.isAlive() ? fill (255, 255, 255) : fill(0, 0, 0);
         rect(this.x, this.y, this.dimension, this.dimension);
     }
